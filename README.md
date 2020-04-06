@@ -1,3 +1,5 @@
+# firebase-angular-shop
+Mixture of angular and firebase
 # OnlineShopAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.0.
