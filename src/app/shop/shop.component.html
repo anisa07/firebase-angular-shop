@@ -1,0 +1,9 @@
+<!-- SHOP STUFF -->
+<app-shop-list [items]="items" class="items-list"></app-shop-list>
+<div class="paginator">
+  <mat-paginator [length]="length"
+                 [pageSize]="pageSize"
+                 [pageSizeOptions]="pageSizeOptions"
+                 (page)="onPaginateChange($event)">
+  </mat-paginator>
+</div>

@@ -1,0 +1,18 @@
+<div class="shop-item">
+  <a [href]="'item/' + item.id" class="img-container">
+    <img [src]="item.urlImg || '../../assets/hubble-unsplash.jpg'" class="image" />
+  </a>
+  <div>
+    <p class="price" appCustom>{{item.price | currency | custom}}</p>
+    <p class="name-container" appCustom>{{item.name}} <span>{{item.category}}</span></p>
+  </div>
+  <div class="icon-container">
+    <button mat-icon-button aria-label="cart icon-button" (click)="toggleAddToCart()">
+      <mat-icon>{{ inCart ? 'remove_shopping_cart' : 'add_shopping_cart' }}</mat-icon>
+    </button>
+    <button mat-icon-button aria-label="favorite icon-button" (click)="toggleFavorite()">
+      <mat-icon [ngClass]="{'favorite': isFavorite, 'not-favorite': !isFavorite}">favorite</mat-icon>
+    </button>
+  </div>
+  <!-- Photo by Hubble on Unsplash -->
+</div>

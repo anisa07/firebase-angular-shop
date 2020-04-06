@@ -1,0 +1,17 @@
+<div class="signin-container">
+  <h3 class="title">Sign In</h3>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="userEmail" placeholder="Ex. pat@example.com">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Password</mat-label>
+      <input matInput formControlName="userPassword" placeholder="Password" type="password">
+    </mat-form-field>
+    <button mat-raised-button type="submit">Login</button>
+    <p class="error" *ngIf="loginError">{{loginError}}</p>
+  </form>
+
+</div>

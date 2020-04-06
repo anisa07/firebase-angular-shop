@@ -1,0 +1,6 @@
+<div class="container">
+  <a [routerLink]="'/shop'" class="shop_link" (mouseenter)="toggle()" (mouseleave)="toggle()">
+    <mat-icon [@hoverLeave]="isHovered ? 'hover' : 'leave'" >keyboard_arrow_down</mat-icon>
+  </a>
+
+</div>
