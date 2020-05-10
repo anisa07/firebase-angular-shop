@@ -12,5 +12,6 @@
     </mat-menu>
     <button mat-button [routerLink]="'/'">Cart</button>
     <button mat-button [routerLink]="'login'" *ngIf="!userLoggedIn">Login</button>
+    <button mat-button *ngIf="userLoggedIn" (click)="logout()">Logout</button>
   </mat-toolbar-row>
 </mat-toolbar>

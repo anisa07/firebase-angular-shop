@@ -25,27 +25,20 @@ import {CustomPipe} from './custom.pipe';
 import {CustomDirective} from './custom.directive';
 import {ShopItemsService} from './shop-items.service';
 import {CartService} from './cart.service';
+import {AuthService} from './auth.service';
 import {ShopCategoriesListComponent} from './shop-categories-list/shop-categories-list.component';
 import {FormsModule} from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import {AngularFireModule} from '@angular/fire';
-import {AngularFirestoreModule} from '@angular/fire/firestore';
-import {AngularFireStorageModule} from '@angular/fire/storage';
-import {AngularFireAuthModule} from '@angular/fire/auth';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 
-const firebaseConfig = {
-  apiKey: 'AIzaSyDCYwrF9gPiqM_zL65U2CLKN4yaVrFDn3M',
-  authDomain: 'online-shop-angular.firebaseapp.com',
-  databaseURL: 'https://online-shop-angular.firebaseio.com',
-  projectId: 'online-shop-angular',
-  storageBucket: 'online-shop-angular.appspot.com',
-  messagingSenderId: '448122546222',
-  appId: '1:448122546222:web:33ab2f69a360d5ec2157bf',
-  measurementId: 'G-K7GTG6C820'
-};
+import { firebaseConfig } from '../firebaseConfig';
+import {AngularFireAuthGuard} from '@angular/fire/auth-guard';
 
 @NgModule({
   declarations: [
@@ -84,7 +77,7 @@ const firebaseConfig = {
     AngularFireAuthModule, // auth
     AngularFireStorageModule // storage
   ],
-  providers: [ShopItemsService, CartService],
+  providers: [ShopItemsService, CartService, AngularFireAuthGuard, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

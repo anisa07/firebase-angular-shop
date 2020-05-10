@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'shop', component: ShopComponent, pathMatch:  'full' },
   { path: 'shop/:category', component: ShopComponent, pathMatch:  'full' },
   { path: 'item/:id', component: ItemComponent, pathMatch: 'full' },
-  { path: 'login', component: LoginComponent, pathMatch: 'full', canActivate: [!GuardService] },
+  { path: 'login', component: LoginComponent, pathMatch: 'full' },
   { path: 'signup', component: SignupComponent, pathMatch: 'full' }
 ];
 
