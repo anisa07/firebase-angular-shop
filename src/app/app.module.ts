@@ -38,17 +38,7 @@ import {SignupComponent} from './signup/signup.component';
 import {ProfileComponent} from './profile/profile.component';
 import {GuardService} from './guard.service';
 import {AntiGuardService} from './anti-guard.service';
-
-const firebaseConfig = {
-  apiKey: 'AIzaSyDCYwrF9gPiqM_zL65U2CLKN4yaVrFDn3M',
-  authDomain: 'online-shop-angular.firebaseapp.com',
-  databaseURL: 'https://online-shop-angular.firebaseio.com',
-  projectId: 'online-shop-angular',
-  storageBucket: 'online-shop-angular.appspot.com',
-  messagingSenderId: '448122546222',
-  appId: '1:448122546222:web:33ab2f69a360d5ec2157bf',
-  measurementId: 'G-K7GTG6C820'
-};
+import {firebaseConfig} from '../config';
 
 @NgModule({
   declarations: [
