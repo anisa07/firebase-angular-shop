@@ -10,7 +10,9 @@
     <mat-menu #shopMenu="matMenu">
       <app-shop-categories-list></app-shop-categories-list>
     </mat-menu>
-    <button mat-button [routerLink]="'/'">Cart</button>
-    <button mat-button [routerLink]="'login'" *ngIf="!userLoggedIn">Login</button>
+    <button mat-button [routerLink]="'cart'">Cart</button>
+    <button mat-button [routerLink]="'profile'" *ngIf="isAuthorised">Profile</button>
+    <button mat-button *ngIf="isAuthorised" (click)="logout()">Logout</button>
+    <button mat-button [routerLink]="'login'" *ngIf="!isAuthorised">Login</button>
   </mat-toolbar-row>
 </mat-toolbar>

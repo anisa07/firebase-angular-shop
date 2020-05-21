@@ -1,6 +1,6 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { GuardService } from './guard.service';
+import {GuardService} from './guard.service';
 
 describe('GuardService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));

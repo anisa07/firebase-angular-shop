@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
-import { from, asyncScheduler } from 'rxjs';
-import { count, filter } from 'rxjs/operators';
-import { ShopItem } from './shop-item/shop-item.component';
+import {Injectable} from '@angular/core';
+import {from, asyncScheduler} from 'rxjs';
+import {count, filter} from 'rxjs/operators';
+import {ShopItem} from './shop-item/shop-item.component';
 
 @Injectable({
   providedIn: 'root'
@@ -97,7 +97,8 @@ export class ShopItemsService {
     'dishes', 'tech', 'accessories', 'books', 'clothes', 'toys'
   ];
 
-  constructor() { }
+  constructor() {
+  }
 
   getLengthOfItems(category = '') {
     const filteredItems = category ? this.fakeShopItems.filter(item => item.category === category) : this.fakeShopItems;

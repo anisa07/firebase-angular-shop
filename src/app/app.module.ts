@@ -27,14 +27,17 @@ import {ShopItemsService} from './shop-items.service';
 import {CartService} from './cart.service';
 import {ShopCategoriesListComponent} from './shop-categories-list/shop-categories-list.component';
 import {FormsModule} from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
+import {ReactiveFormsModule} from '@angular/forms';
 
 import {AngularFireModule} from '@angular/fire';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {AngularFireStorageModule} from '@angular/fire/storage';
 import {AngularFireAuthModule} from '@angular/fire/auth';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
+import {LoginComponent} from './login/login.component';
+import {SignupComponent} from './signup/signup.component';
+import {ProfileComponent} from './profile/profile.component';
+import {GuardService} from './guard.service';
+import {AntiGuardService} from './anti-guard.service';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyDCYwrF9gPiqM_zL65U2CLKN4yaVrFDn3M',
@@ -62,7 +65,8 @@ const firebaseConfig = {
     CustomDirective,
     ShopCategoriesListComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -84,7 +88,7 @@ const firebaseConfig = {
     AngularFireAuthModule, // auth
     AngularFireStorageModule // storage
   ],
-  providers: [ShopItemsService, CartService],
+  providers: [ShopItemsService, CartService, GuardService, AntiGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
