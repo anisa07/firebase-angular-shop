@@ -1,1 +1,21 @@
-<p>signup works!</p>
+<div class="signup-container">
+  <h3 class="title">Sign Up</h3>
+  <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" class="form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" placeholder="Example pat@example.com">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Password</mat-label>
+      <input matInput formControlName="password" placeholder="Password" type="password">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Confirm Password</mat-label>
+      <input matInput formControlName="passwordRepetition" placeholder="Password" type="password">
+    </mat-form-field>
+    <button mat-raised-button type="submit">Signup</button>
+    <p class="error" *ngIf="signUpError">{{signUpError}}</p>
+  </form>
+</div>

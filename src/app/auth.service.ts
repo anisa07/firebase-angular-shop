@@ -23,6 +23,14 @@ export class AuthService implements OnDestroy {
     });
   }
 
+  signUp({email, password}) {
+    return this.auth.createUserWithEmailAndPassword(email, password).then(() => {
+      this.tokenSubscription = this.auth.idToken.subscribe(token => {
+        sessionStorage.setItem(this.tokenKey, token);
+      });
+    });
+  }
+
   checkIfUserAuthorised() {
     return this.auth.authState;
   }

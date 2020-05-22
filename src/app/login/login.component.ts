@@ -13,13 +13,6 @@ export class LoginComponent implements OnInit {
   loginError: string;
 
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
-    this.loginForm = this.fb.group({
-      userEmail: new FormControl('', [
-        Validators.required,
-        Validators.email
-      ]),
-      userPassword: new FormControl('', Validators.required)
-    });
   }
 
   async onSubmit() {
@@ -34,6 +27,13 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.loginForm = this.fb.group({
+      userEmail: new FormControl('', [
+        Validators.required,
+        Validators.email
+      ]),
+      userPassword: new FormControl('', Validators.required)
+    });
   }
 
 }
