@@ -16,6 +16,7 @@
       <input matInput formControlName="passwordRepetition" placeholder="Password" type="password">
     </mat-form-field>
     <button mat-raised-button type="submit">Signup</button>
+    <a class="signup-link" (click)="navigateToSignIn()">Have an account? Switch to Sign In</a>
     <p class="error" *ngIf="signUpError">{{signUpError}}</p>
   </form>
 </div>

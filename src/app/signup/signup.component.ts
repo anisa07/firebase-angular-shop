@@ -46,4 +46,7 @@ export class SignupComponent implements OnInit {
     return pass === pass2 ? null : { error: 'Passwords are not equal' };
   }
 
+  navigateToSignIn() {
+    this.router.navigate(['login']);
+  }
 }

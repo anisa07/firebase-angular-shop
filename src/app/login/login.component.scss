@@ -31,5 +31,19 @@
       align-self: center;
       margin-top: 20px;
     }
+
+    .forgot-link {
+      margin: 5px 0;
+      cursor: pointer;
+      color: $special-link;
+      text-decoration: underline;
+    }
+
+    .signup-link {
+      margin: 20px 0;
+      cursor: pointer;
+      color: $link-color;
+      text-decoration: underline;
+    }
   }
 }
