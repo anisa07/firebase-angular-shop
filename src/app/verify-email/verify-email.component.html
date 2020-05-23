@@ -1,0 +1,11 @@
+<form [formGroup]="verifyEmailForm" (ngSubmit)="onSubmit()" class="form">
+  <h3 class="title">Verify Email</h3>
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email" placeholder="Ex. pat@example.com">
+  </mat-form-field>
+
+  <button mat-raised-button type="submit">Verify</button>
+  <p class="error" *ngIf="verifyEmailError">{{verifyEmailError}}</p>
+  <p class="verify-message" *ngIf="verifyMessage">{{verifyMessage}}</p>
+</form>

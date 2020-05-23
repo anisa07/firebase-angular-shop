@@ -11,6 +11,7 @@ import {Router} from '@angular/router';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   loginError: string;
+  passwordForgotten: boolean;
 
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
   }
@@ -34,6 +35,10 @@ export class LoginComponent implements OnInit {
       ]),
       userPassword: new FormControl('', Validators.required)
     });
+  }
+
+  forgotPassword() {
+    this.passwordForgotten = true;
   }
 
   navigateToSignUp() {

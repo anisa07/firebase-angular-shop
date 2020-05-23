@@ -39,6 +39,8 @@ import {ProfileComponent} from './profile/profile.component';
 import {GuardService} from './guard.service';
 import {AntiGuardService} from './anti-guard.service';
 import {firebaseConfig} from '../config';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { VerifyEmailComponent } from './verify-email/verify-email.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,9 @@ import {firebaseConfig} from '../config';
     ShopCategoriesListComponent,
     LoginComponent,
     SignupComponent,
-    ProfileComponent
+    ProfileComponent,
+    ResetPasswordComponent,
+    VerifyEmailComponent
   ],
   imports: [
     BrowserModule,

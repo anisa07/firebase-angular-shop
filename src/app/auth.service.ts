@@ -31,6 +31,10 @@ export class AuthService implements OnDestroy {
     });
   }
 
+  resetPassword({code, password}) {
+    return this.auth.confirmPasswordReset(code, password);
+  }
+
   checkIfUserAuthorised() {
     return this.auth.authState;
   }
@@ -39,6 +43,10 @@ export class AuthService implements OnDestroy {
     this.auth.signOut().then(() => {
       sessionStorage.removeItem(this.tokenKey);
     });
+  }
+
+  verifyEmail(email) {
+    return this.auth.sendPasswordResetEmail(email);
   }
 
   ngOnDestroy(): void {

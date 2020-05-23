@@ -1,6 +1,6 @@
 <div class="signin-container">
-  <h3 class="title">Sign In</h3>
-  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form">
+  <form [formGroup]="loginForm" *ngIf="!passwordForgotten; else elseVerifyEmailBlock" (ngSubmit)="onSubmit()" class="form">
+    <h3 class="title">Sign In</h3>
     <mat-form-field class="example-full-width">
       <mat-label>Email</mat-label>
       <input matInput formControlName="userEmail" placeholder="Ex. pat@example.com">
@@ -10,9 +10,12 @@
       <mat-label>Password</mat-label>
       <input matInput formControlName="userPassword" placeholder="Password" type="password">
     </mat-form-field>
-    <a class="forgot-link">Forgot Password or Email?</a>
+    <a class="forgot-link" (click)="forgotPassword()">Forgot Password or Email?</a>
     <button mat-raised-button type="submit">Login</button>
     <a class="signup-link" (click)="navigateToSignUp()">Have no account? Switch to Sign Up</a>
     <p class="error" *ngIf="loginError">{{loginError}}</p>
   </form>
+  <ng-template #elseVerifyEmailBlock>
+    <app-verify-email></app-verify-email>
+  </ng-template>
 </div>

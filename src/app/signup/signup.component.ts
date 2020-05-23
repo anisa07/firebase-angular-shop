@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {AuthService} from '../auth.service';
 import {Router} from '@angular/router';
+import {checkPasswords} from '../utils/checkPasswords';
 
 @Component({
   selector: 'app-signup',
@@ -24,7 +25,7 @@ export class SignupComponent implements OnInit {
         this.signUpError = e.message;
       }
     } else {
-      this.signUpError = this.signUpForm.errors.error;
+      this.signUpError = this.signUpForm.errors ? this.signUpForm.errors.error : 'Form is invalid';
     }
   }
 
@@ -35,15 +36,8 @@ export class SignupComponent implements OnInit {
         Validators.email
       ]),
       password: new FormControl('', Validators.required),
-      passwordRepetition: new FormControl('')
-    }, {validators: this.checkPasswords});
-  }
-
-  checkPasswords(group: FormGroup) {
-    const pass = group.get('password').value;
-    const pass2 = group.get('passwordRepetition').value;
-
-    return pass === pass2 ? null : { error: 'Passwords are not equal' };
+      confirmPassword: new FormControl('', Validators.required)
+    }, {validators: checkPasswords});
   }
 
   navigateToSignIn() {
