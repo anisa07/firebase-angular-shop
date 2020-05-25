@@ -1,0 +1,54 @@
+@import '../../../../styles/colors';
+@import '../../../../styles/typography';
+
+.shop-item {
+  margin: 10px 15px;
+  width: 250px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 3px;
+  box-shadow: 5px 5px 5px $shop-item-border-internal;
+
+  .img-container {
+    display: block;
+    width: inherit;
+    height: 300px;
+    overflow: hidden;
+
+    .image {
+      width: inherit;
+    }
+  }
+
+  p {
+    margin: 5px 0;
+    padding: 0;
+    font-family: $main-font;
+    color: $shop-item-color;
+  }
+
+  .price {
+    font-weight: bolder;
+  }
+
+  .name-container {
+    font-style: italic;
+    span {
+      opacity: 0.7;
+    }
+  }
+
+  .icon-container {
+    display: flex;
+    justify-content: flex-end;
+    color: $shop-item-color;
+
+    .not-favorite {
+      opacity: 0.2;
+    }
+
+    .favorite {
+      color: $favorite-item;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import '../../styles/colors';
+
+.signin-container{
+  height: 600px;
+  width: 600px;
+  margin: 20px auto;
+  padding: 15px;
+  border-top: 1px solid $shop-item-border-internal;
+  border-left: 1px solid $shop-item-border-internal;
+  box-shadow: 10px 10px 10px $shop-item-border-internal;
+  text-align: center;
+
+
+  .title {
+    color: $title-color;
+  }
+
+  .error {
+    margin-top: 20px;
+    color: $title-color;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    button {
+      width: 25%;
+      min-width: 100px;
+      align-self: center;
+      margin-top: 20px;
+    }
+
+    .forgot-link {
+      margin: 5px 0;
+      cursor: pointer;
+      color: $special-link;
+      text-decoration: underline;
+    }
+
+    .signup-link {
+      margin: 20px 0;
+      cursor: pointer;
+      color: $link-color;
+      text-decoration: underline;
+    }
+  }
+}

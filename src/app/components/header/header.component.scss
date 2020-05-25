@@ -1,0 +1,20 @@
+@import '../../styles/typography';
+@import '../../styles/colors';
+
+.header {
+  flex-direction: row;
+
+  .logo {
+    font-family: 'LogoFont', serif;
+    font-size: 2rem;
+
+    a {
+      text-decoration: none;
+      color: $logo-color;
+    }
+  }
+
+  .links {
+    justify-content: flex-end;
+  }
+}

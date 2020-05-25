@@ -1,0 +1,27 @@
+@import '../../styles/colors';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+  .title {
+    color: $title-color;
+  }
+
+  .error {
+    margin-top: 20px;
+    color: $title-color;
+  }
+
+  .verify-message {
+    color: $special-link;
+  }
+
+  button {
+    width: 25%;
+    min-width: 100px;
+    align-self: center;
+    margin-top: 20px;
+  }
+}

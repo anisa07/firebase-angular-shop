@@ -1,15 +1,15 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {HomeComponent} from './home/home.component';
-import {ShopComponent} from './shop/shop.component';
-import {ItemComponent} from './item/item.component';
-import {LoginComponent} from './login/login.component';
-import {SignupComponent} from './signup/signup.component';
-import {CartComponent} from './cart/cart.component';
-import {ProfileComponent} from './profile/profile.component';
-import {ResetPasswordComponent} from './reset-password/reset-password.component';
-import {GuardService} from './guard.service';
-import {AntiGuardService} from './anti-guard.service';
+import {HomeComponent} from './components/home/home.component';
+import {ShopComponent} from './components/shop/shop.component';
+import {ItemComponent} from './components/item/item.component';
+import {LoginComponent} from './components/login/login.component';
+import {SignupComponent} from './components/signup/signup.component';
+import {CartComponent} from './components/cart/cart.component';
+import {ProfileComponent} from './components/profile/profile.component';
+import {ResetPasswordComponent} from './components/reset-password/reset-password.component';
+import {GuardService} from './services/guard.service';
+import {AntiGuardService} from './services/anti-guard.service';
 
 const routes: Routes = [
   {path: '', component: HomeComponent, pathMatch: 'full'},
