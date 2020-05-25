@@ -9,6 +9,12 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatListModule} from '@angular/material/list';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {FormsModule} from '@angular/forms';
+import {ReactiveFormsModule} from '@angular/forms';
+import {AngularFireModule} from '@angular/fire';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
+import {AngularFireStorageModule} from '@angular/fire/storage';
+import {AngularFireAuthModule} from '@angular/fire/auth';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
@@ -26,14 +32,7 @@ import {CustomDirective} from './directives/custom.directive';
 import {ShopItemsService} from './services/shop-items.service';
 import {CartService} from './services/cart.service';
 import {ShopCategoriesListComponent} from './components/header/shop-categories-list/shop-categories-list.component';
-import {FormsModule} from '@angular/forms';
-import {ReactiveFormsModule} from '@angular/forms';
-
-import {AngularFireModule} from '@angular/fire';
-import {AngularFirestoreModule} from '@angular/fire/firestore';
-import {AngularFireStorageModule} from '@angular/fire/storage';
-import {AngularFireAuthModule} from '@angular/fire/auth';
-import {LoginComponent} from './components/login/login.component';
+import {SigninComponent} from './components/signIn/signin.component';
 import {SignupComponent} from './components/signup/signup.component';
 import {ProfileComponent} from './components/profile/profile.component';
 import {GuardService} from './services/guard.service';
@@ -56,7 +55,7 @@ import { VerifyEmailComponent } from './components/verify-email/verify-email.com
     CustomPipe,
     CustomDirective,
     ShopCategoriesListComponent,
-    LoginComponent,
+    SigninComponent,
     SignupComponent,
     ProfileComponent,
     ResetPasswordComponent,

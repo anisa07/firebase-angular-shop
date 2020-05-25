@@ -11,7 +11,7 @@
       <input matInput formControlName="userPassword" placeholder="Password" type="password">
     </mat-form-field>
     <a class="forgot-link" (click)="forgotPassword()">Forgot Password or Email?</a>
-    <button mat-raised-button type="submit">Login</button>
+    <button mat-raised-button type="submit">SignIn</button>
     <a class="signup-link" (click)="navigateToSignUp()">Have no account? Switch to Sign Up</a>
     <p class="error" *ngIf="loginError">{{loginError}}</p>
   </form>

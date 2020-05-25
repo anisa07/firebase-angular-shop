@@ -18,6 +18,10 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@components/*": ["components/*"],
+      "@services/*": ["services/*"]
+    }
   }
 }

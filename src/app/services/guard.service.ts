@@ -14,7 +14,7 @@ export class GuardService implements CanActivate {
     return this.authService.checkIfUserAuthorised().pipe(
       map(isAuthorised => {
         if (!isAuthorised) {
-          this.router.navigate(['login']);
+          this.router.navigate(['signin']);
         }
         return !!isAuthorised;
       })

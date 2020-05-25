@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {checkPasswords} from '../../utils/checkPasswords';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {AuthService} from '../../services/auth.service';
@@ -21,7 +21,7 @@ export class ResetPasswordComponent implements OnInit {
       try {
         const { password } = this.resetPasswordForm.value;
         await this.authService.resetPassword({code: this.code, password});
-        await this.router.navigate(['login']);
+        await this.router.navigate(['signin']);
       } catch (e) {
         this.resetPasswordError = e.message;
       }

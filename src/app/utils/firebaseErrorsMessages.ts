@@ -5,7 +5,7 @@ export class FirebaseErrors {
 
     switch (errorCode) {
       case 'auth/wrong-password':
-        message = 'Invalid login credentials.';
+        message = 'Invalid credentials.';
         break;
       case 'auth/network-request-failed':
         message = 'Please check your internet connection';
